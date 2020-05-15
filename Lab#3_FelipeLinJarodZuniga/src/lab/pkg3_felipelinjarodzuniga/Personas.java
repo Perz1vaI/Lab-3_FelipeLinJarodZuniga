@@ -2,14 +2,14 @@ package lab.pkg3_felipelinjarodzuniga;
 
 public class Personas {
 
-    protected int id;
+    protected String id;
     protected String username;
     protected String contra;
     protected String correo;
     protected String nombre;
     protected String fecha;
 
-    public Personas(int id, String username, String contra, String correo, String nombre, String fecha) {
+    public Personas(String id, String username, String contra, String correo, String nombre, String fecha) {
         this.id = id;
         this.username = username;
         this.contra = contra;
@@ -18,11 +18,11 @@ public class Personas {
         this.fecha = fecha;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

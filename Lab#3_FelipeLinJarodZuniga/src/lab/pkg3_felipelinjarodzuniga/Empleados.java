@@ -5,7 +5,7 @@ public class Empleados extends Personas {
     private String horario;
     private int productos;
 
-    public Empleados(String horario, int productos, int id, String username, String contra, String correo, String nombre, String fecha) {
+    public Empleados(String horario, int productos, String id, String username, String contra, String correo, String nombre, String fecha) {
         super(id, username, contra, correo, nombre, fecha);
         this.horario = horario;
         this.productos = productos;

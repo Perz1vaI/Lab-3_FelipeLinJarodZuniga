@@ -9,7 +9,8 @@ package lab.pkg3_felipelinjarodzuniga;
  *
  * @author Jhon Zuniga
  */
-public class Comida extends Productos{
+public class Comida extends Productos {
+
     protected String tipo;
     protected String fecha_venci;
 
@@ -23,17 +24,23 @@ public class Comida extends Productos{
 
     public Comida(String tipo, String fecha_venci, String descripcion, String nombre, double precio) {
         super(descripcion, nombre, precio);
-        this.tipo = tipo;
+
         this.fecha_venci = fecha_venci;
+
+        setTipo(tipo);
+
     }
 
-    
     public String getTipo() {
         return tipo;
     }
 
     public void setTipo(String tipo) {
-        this.tipo = tipo;
+        if (tipo.equals("1")) {
+            this.tipo = "Comida";
+        } else if (tipo.equals("2")) {
+            this.tipo = "Bebida";
+        }
     }
 
     public String getFecha_venci() {
@@ -73,6 +80,4 @@ public class Comida extends Productos{
         return "Comida{" + "tipo=" + tipo + ", fecha_venci=" + fecha_venci + '}';
     }
 
-   
-    
 }
