@@ -1,11 +1,12 @@
 
 package lab.pkg3_felipelinjarodzuniga;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
 public class Lab3_FelipeLinJarodZuniga {
-
+//Meter color a letra
 public static final String ANSI_BLACK = "\u001B[30m";
   public static final String ANSI_RED = "\u001B[31m";
   public static final String ANSI_GREEN = "\u001B[32m";
@@ -25,24 +26,78 @@ public static final String ANSI_BLACK = "\u001B[30m";
   public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
     public static void main(String[] args) {
         Scanner sc=new Scanner (System.in);
-        String master="Sudo", contra="54321";
+        String master="SUDO", contra="54321";
+        ArrayList user =new ArrayList();
+        ArrayList pas =new ArrayList();
         System.out.println(ANSI_PURPLE_BACKGROUND+ANSI_WHITE+"Adminstrador: '"+master+"' Contraseña: '"+contra+"'");
        System.out.println(ANSI_CYAN_BACKGROUND + ANSI_PURPLE + "Bienvenido a nuestro sistema centro comercial");
         System.out.println("");
+        int p=0;
+        while (p==0){
         System.out.println(ANSI_GREEN_BACKGROUND+ANSI_BLACK+"------------------------*Menu*------------------------");
         System.out.println(ANSI_BLUE+"1. Log in");
-        System.out.println(ANSI_BLUE+"2. Sing in");
+        System.out.println(ANSI_BLUE+"2. Sign in");
         System.out.println(ANSI_BLUE+"3. exit");
         System.out.println(ANSI_GREEN_BACKGROUND+ANSI_BLACK+"------------------------------------------------------");
-        System.out.println(ANSI_RED_BACKGROUND+"Ingrese la opcion deseada");
+        System.out.println("Ingrese la opcion deseada");
         int op=sc.nextInt();
         switch (op){
             case 1:
+                int c=0;
+                while (c==0){
+                System.out.println(ANSI_CYAN+ANSI_WHITE_BACKGROUND+"Ingrese su usuario");
+                String us=sc.next();
+                System.out.println(ANSI_CYAN+ANSI_WHITE_BACKGROUND+"Ingresse su contraseña");
+                String cn=sc.next();
+                if (us==master&&cn==contra) {
+                    System.out.println(ANSI_GREEN+"Bienvenido Administrador"+ master);
+                    c=1;
+                }else if(user.size()>=0) {
+                    for (int i = 0; i <= user.size(); i++) {
+                        if (user.get(i).equals(us)) {
+                            if (pas.get(i).equals(cn)) {
+                                System.out.println(ANSI_GREEN+"Bienvenido gran clente  "+us);
+                                c=1;
+                                break;
+                            }else{
+                                System.out.println(ANSI_RED+"Contraseña Incorrecta");
+                                c=0;
+                            }
+                        }else{
+                            System.out.println(ANSI_RED+"Usuario no existe");
+                            c=0; 
+                        }
+                    }
+ 
+                }else {
+                    System.out.println(ANSI_RED+"Aun no se ha creado ningun usuario");
+                    c=1;
+                }
+                }
                 break;
             case 2:
+                System.out.println("Ingrese su nombre de usuario");
+                String nuvusu=sc.next();
+                System.out.println("Ingrese su cntraseña");
+                String nupas=sc.next();
+                System.out.print("Procesando../");
+                System.out.print("../");
+                System.out.print("../");
+                System.out.print("../");
+                System.out.println("");
+                user.add(nuvusu);
+                pas.add(nupas);
+                System.out.println("");
+                System.out.println(ANSI_GREEN+"Agregado correctamente");
+                System.out.println("");
                 break;
             case 3:
-                System.out.println("Gracias por elegirnos");
+                System.out.println(ANSI_RED+"Gracias por elegirnos");
+                p=1;
+                break;
+            default:
+                System.out.println(ANSI_RED+"Error");
+        }
         }
        
     }
