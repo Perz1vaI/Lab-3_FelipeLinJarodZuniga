@@ -1,14 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab.pkg3_felipelinjarodzuniga;
 
-/**
- *
- * @author Jhon Zuniga
- */
-public class Bares {
+import java.util.Random;
+
+public class Bares extends Locales {
     
+    public Random rand = new Random();
+    
+    public Bares(String nombre, Empleados Gerente) {
+        super(nombre, Gerente);
+    }
+    
+    public void Aleatorio() {
+        int random = rand.nextInt(listaP.size());
+        
+        double precio = listaP.get(random).getPrecio();
+        double descuento = precio - (precio * 0.50);
+        
+        listaP.get(random).setPrecio(descuento);
+        
+    }
 }
