@@ -667,8 +667,9 @@ public class Lab3_FelipeLinJarodZuniga {
                             }
                             c = 1;
                         } else if (Clientes.size() >= 0) {
-                            int v = 0;
+                            int v = 0,l;
                             for (int i = 0; i < Clientes.size(); i++) {
+                                l=i;
                                 System.out.println(Clientes.get(i).getUsername());
                                 if (us.equals(Clientes.get(i).getUsername())) {
                                     if (Clientes.get(i).getContra().equals(cn)) {
@@ -693,7 +694,9 @@ public class Lab3_FelipeLinJarodZuniga {
                                 int t = sc.nextInt();
                                 switch (t) {
                                     case 1:
-
+                                        int s=0,j=0;
+                                        String factura;
+                                        double cd=0,td;
                                         for (int i = 0; i < tienda.size(); i++) {
                                             System.out.println(ANSI_GREEN + i + "" + tienda.get(i));
                                         }
@@ -702,6 +705,13 @@ public class Lab3_FelipeLinJarodZuniga {
                                         for (int i = 0; i < tienda.get(o).getListaP().size(); i++) {
                                             System.out.println(ANSI_GREEN + tienda.get(o).getListaP().get(i) + "---------" + tienda.get(o).getListaP().get(i).getPrecio());
                                         }
+                                        System.out.println("Que producto desea comprar");
+                                        s=sc.nextInt();
+                                        System.out.println("Que cantidad desea comprar");
+                                        j=sc.nextInt();
+                                        cd=tienda.get(s).getListaP().get(s).getPrecio()*j;
+                                        System.out.println("Total es "+cd);
+                                        
                                         break;
                                     case 2:
                                         for (int i = 0; i < bar.size(); i++) {
@@ -712,6 +722,12 @@ public class Lab3_FelipeLinJarodZuniga {
                                         for (int i = 0; i < bar.get(o).getListaP().size(); i++) {
                                             System.out.println(ANSI_GREEN + bar.get(o).getListaP().get(i) + "--------" + bar.get(o).getListaP().get(i).getPrecio());
                                         }
+                                        System.out.println("Que producto desea comprar");
+                                        s=sc.nextInt();
+                                        System.out.println("Que cantidad desea comprar");
+                                        j=sc.nextInt();
+                                        cd=bar.get(s).getListaP().get(s).getPrecio()*j;
+                                        System.out.println("Total es "+cd);
                                         break;
                                     case 3:
                                         for (int i = 0; i < quiosco.size(); i++) {
@@ -722,6 +738,12 @@ public class Lab3_FelipeLinJarodZuniga {
                                         for (int i = 0; i < quiosco.get(o).getListaP().size(); i++) {
                                             System.out.println(ANSI_GREEN + quiosco.get(o).getListaP().get(i) + "--------" + quiosco.get(o).getListaP().get(i).getPrecio());
                                         }
+                                        System.out.println("Que producto desea comprar");
+                                        s=sc.nextInt();
+                                        System.out.println("Que cantidad desea comprar");
+                                        j=sc.nextInt();
+                                        cd=quiosco.get(s).getListaP().get(s).getPrecio()*j;
+                                        System.out.println("Total es "+cd);
                                         break;
                                     default:
                                         System.out.println(ANSI_GREEN + "Esa opcion no existe");
