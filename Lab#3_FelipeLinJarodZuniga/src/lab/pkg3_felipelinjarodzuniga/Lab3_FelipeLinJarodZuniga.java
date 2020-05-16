@@ -349,6 +349,180 @@ public class Lab3_FelipeLinJarodZuniga {
                                     }
                                     case 2: {
                                         // modificar
+                                        System.out.println("1. Modificar Locales \n2. Modificar Empleados \n3. Modificar Productos");
+                                        int opcion_modificar = sc.nextInt();
+                                        while (opcion_modificar != 4) {
+                                            switch (opcion_modificar) {
+                                                case 1: {
+                                                    System.out.println("1. Modificar Tiendas \n2. Modificar Quioscos \n3. Modificar Bares");
+                                                    int opcion_modificar2 = sc.nextInt();
+                                                    switch (opcion_modificar2) {
+                                                        case 1: {
+
+                                                            for (Locales locales : tienda) {
+                                                                System.out.println("Posicion " + tienda.indexOf(locales) + " :" + locales);
+                                                            }
+
+                                                            System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                            int posicion = sc.nextInt();
+
+                                                            System.out.println("Ingrese el nuevo nombre: ");
+                                                            String nombre = sc.nextLine();
+
+                                                            tienda.get(posicion).setNombre(nombre);
+
+                                                            break;
+                                                        }
+                                                        case 2: {
+
+                                                            for (Locales locales : quiosco) {
+                                                                System.out.println("Posicion " + quiosco.indexOf(locales) + " :" + locales);
+                                                            }
+
+                                                            System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                            int posicion = sc.nextInt();
+
+                                                            System.out.println("Ingrese el nuevo nombre: ");
+                                                            String nombre = sc.nextLine();
+
+                                                            quiosco.get(posicion).setNombre(nombre);
+
+                                                            break;
+                                                        }
+                                                        case 3: {
+                                                            for (Locales locales : bar) {
+                                                                System.out.println("Posicion " + bar.indexOf(locales) + " :" + locales);
+                                                            }
+
+                                                            System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                            int posicion = sc.nextInt();
+
+                                                            System.out.println("Ingrese el nuevo nombre: ");
+                                                            String nombre = sc.nextLine();
+
+                                                            bar.get(posicion).setNombre(nombre);
+
+                                                            break;
+                                                        }
+                                                        default:
+                                                            System.out.println("No existe esa opcion!");
+                                                    }
+
+                                                    break;
+                                                }
+                                                case 2: {
+                                                    for (Personas pa : Empleado) {
+                                                        System.out.println("Posicion " + Empleado.indexOf(pa) + " :" + pa);
+                                                    }
+
+                                                    System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                    int posicion = sc.nextInt();
+
+                                                    System.out.println(ANSI_GREEN + "Ingrese su ID: ");
+                                                    sc.nextLine();
+                                                    String id = sc.nextLine();
+                                                    System.out.println(ANSI_GREEN + "Ingrese su usuario: ");
+                                                    String username = sc.nextLine();
+                                                    System.out.println(ANSI_GREEN + "Ingrese su contraseña: ");
+                                                    String contra1 = sc.nextLine();
+                                                    System.out.println(ANSI_GREEN + "Ingrese su correo electronico: ");
+                                                    String correo = sc.nextLine();
+                                                    System.out.println(ANSI_GREEN + "Ingrese su nombre completo: ");
+                                                    String nombreC = sc.nextLine();
+                                                    System.out.println(ANSI_GREEN + "Ingrese su fecha de nacimiento(DD/MM/YYYY): ");
+                                                    String fecha = sc.nextLine();
+                                                    System.out.println(ANSI_GREEN + "Ingrese su horario de trabajo: ");
+                                                    String horario = sc.nextLine();
+
+                                                    Empleado.set(posicion, new Empleados(horario, 0, id, username, contra1, correo, nombreC, fecha));
+
+                                                    break;
+                                                }
+                                                case 3: {
+                                                    System.out.println("1. Modificar Ropa \n2. Modificar Juguetes \n3. Modificar Comida");
+                                                    int opcion_modificar2 = sc.nextInt();
+                                                    switch (opcion_modificar2) {
+                                                        case 1: {
+                                                            for (Productos pa : ropa) {
+                                                                System.out.println("Posicion " + ropa.indexOf(pa) + " :" + pa);
+                                                            }
+                                                            System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                            int posicion = sc.nextInt();
+
+                                                            System.out.println(ANSI_GREEN + "El nombre de la ropa: ");
+                                                            sc.nextLine();
+                                                            String nom1 = sc.nextLine();
+                                                            System.out.println(ANSI_GREEN + "La descripcion de la ropa: ");
+                                                            String descrip1 = sc.nextLine();
+                                                            System.out.println(ANSI_GREEN + "El precio de la ropa");
+                                                            int precio1 = sc.nextInt();
+                                                            System.out.println(ANSI_GREEN + "Ingrese el genero de la ropa");
+                                                            sc.nextLine();
+                                                            String genero = sc.nextLine();
+                                                            System.out.println(ANSI_GREEN + "Ingrese la talla de la ropa");
+                                                            String talla = sc.nextLine();
+
+                                                            ropa.set(posicion, new Ropa(genero, talla, descrip1, nom1, precio1));
+
+                                                            break;
+                                                        }
+                                                        case 2: {
+                                                            for (Productos pa : Juguetes) {
+                                                                System.out.println("Posicion " + Juguetes.indexOf(pa) + " :" + pa);
+                                                            }
+                                                            System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                            int posicion = sc.nextInt();
+
+                                                            System.out.println(ANSI_GREEN + "El nombre del juguete: ");
+                                                            sc.nextLine();
+                                                            String nom2 = sc.nextLine();
+                                                            System.out.println(ANSI_GREEN + "La descripcion del producto: ");
+                                                            String descrip2 = sc.nextLine();
+                                                            System.out.println(ANSI_GREEN + "La descripcion del Juguete: ");
+                                                            String descrip22 = sc.nextLine();
+                                                            System.out.println(ANSI_GREEN + "El precio del juguete");
+                                                            int precio2 = sc.nextInt();
+
+                                                            Juguetes.set(posicion, new Juguetes(descrip2, descrip22, nom2, precio2));
+
+                                                            break;
+                                                        }
+                                                        case 3: {
+                                                            for (Productos pa : comida) {
+                                                                System.out.println("Posicion " + comida.indexOf(pa) + " :" + pa);
+                                                            }
+                                                            System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                            int posicion = sc.nextInt();
+
+                                                            System.out.println(ANSI_GREEN + "El nombre de la comida: ");
+                                                            sc.nextLine();
+                                                            String nom3 = sc.nextLine();
+                                                            System.out.println(ANSI_GREEN + "La descripcion de la comida: ");
+                                                            String descrip3 = sc.nextLine();
+                                                            System.out.println(ANSI_GREEN + "El precio de la comida: ");
+                                                            int precio3 = sc.nextInt();
+                                                            System.out.println(ANSI_GREEN + "Ingrese 1. Comida 2. Bebida");
+                                                            sc.nextLine();
+                                                            String tipo = sc.nextLine();
+                                                            System.out.println(ANSI_GREEN + "Fecha de caducidad");
+                                                            String fecha_venci = sc.nextLine();
+
+                                                            comida.set(posicion, new Comida(tipo, fecha_venci, descrip3, nom3, precio3));
+
+                                                            break;
+                                                        }
+                                                        default:
+                                                            System.out.println("No existe esa opcion!");
+                                                    }
+
+                                                    break;
+                                                }
+
+                                                default:
+                                                    System.out.println("No existe esa opcion!");
+                                            }
+                                        }
+
                                         break;
                                     }
                                     case 3: {
