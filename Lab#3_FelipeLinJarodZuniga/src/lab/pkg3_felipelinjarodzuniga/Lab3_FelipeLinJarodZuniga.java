@@ -526,9 +526,134 @@ public class Lab3_FelipeLinJarodZuniga {
                                         break;
                                     }
                                     case 3: {
-                                        // eliminar
+                                        System.out.println("1. Eliminar Locales \n2.  Eliminar Empleados \n3.  Eliminar Productos");
+                                        int opcion_modificar = sc.nextInt();
+                                        while (opcion_modificar != 4) {
+                                            switch (opcion_modificar) {
+                                                case 1: {
+                                                    System.out.println("1.  Eliminar Tiendas \n2.  Eliminar Quioscos \n3.  Eliminar Bares");
+                                                    int opcion_modificar2 = sc.nextInt();
+                                                    switch (opcion_modificar2) {
+                                                        case 1: {
+
+                                                            for (Locales locales : tienda) {
+                                                                System.out.println("Posicion " + tienda.indexOf(locales) + " :" + locales);
+                                                            }
+
+                                                            System.out.println("Ingrese la posicion que quiere  Eliminar: ");
+                                                            int posicion = sc.nextInt();
+
+                                                            
+
+                                                            tienda.remove(posicion);
+
+                                                            break;
+                                                        }
+                                                        case 2: {
+
+                                                            for (Locales locales : quiosco) {
+                                                                System.out.println("Posicion " + quiosco.indexOf(locales) + " :" + locales);
+                                                            }
+
+                                                            System.out.println("Ingrese la posicion que quiere  Eliminar: ");
+                                                            int posicion = sc.nextInt();
+
+                                                           
+
+                                                            quiosco.remove(posicion);
+
+                                                            break;
+                                                        }
+                                                        case 3: {
+                                                            for (Locales locales : bar) {
+                                                                System.out.println("Posicion " + bar.indexOf(locales) + " :" + locales);
+                                                            }
+
+                                                            System.out.println("Ingrese la posicion que quiere Eliminar: ");
+                                                            int posicion = sc.nextInt();
+
+                                                           
+
+                                                            bar.remove(posicion);
+
+                                                            break;
+                                                        }
+                                                        default:
+                                                            System.out.println("No existe esa opcion!");
+                                                    }
+
+                                                    break;
+                                                }
+                                                case 2: {
+                                                    for (Personas pa : Empleado) {
+                                                        System.out.println("Posicion " + Empleado.indexOf(pa) + " :" + pa);
+                                                    }
+
+                                                    System.out.println("Ingrese la posicion que quiere Eliminar: ");
+                                                    int posicion = sc.nextInt();
+
+                                                    Empleado.remove(posicion);
+
+                                                    break;
+                                                }
+                                                case 3: {
+                                                    System.out.println("1. Eliminar Ropa \n2. Eliminar Juguetes \n3. Eliminar Comida");
+                                                    int opcion_modificar2 = sc.nextInt();
+                                                    switch (opcion_modificar2) {
+                                                        case 1: {
+                                                            for (Productos pa : ropa) {
+                                                                System.out.println("Posicion " + ropa.indexOf(pa) + " :" + pa);
+                                                            }
+                                                            System.out.println("Ingrese la posicion que quiere Eliminar: ");
+                                                            int posicion = sc.nextInt();
+
+                                                           
+
+                                                            ropa.remove(posicion);
+
+                                                            break;
+                                                        }
+                                                        case 2: {
+                                                            for (Productos pa : Juguetes) {
+                                                                System.out.println("Posicion " + Juguetes.indexOf(pa) + " :" + pa);
+                                                            }
+                                                            System.out.println("Ingrese la posicion que quiere Eliminar: ");
+                                                            int posicion = sc.nextInt();
+
+                                                            
+
+                                                            Juguetes.remove(posicion);
+
+                                                            break;
+                                                        }
+                                                        case 3: {
+                                                            for (Productos pa : comida) {
+                                                                System.out.println("Posicion " + comida.indexOf(pa) + " :" + pa);
+                                                            }
+                                                            System.out.println("Ingrese la posicion que quiere Eliminar: ");
+                                                            int posicion = sc.nextInt();
+
+                                                           
+
+                                                            comida.remove(posicion);
+
+                                                            break;
+                                                        }
+                                                        default:
+                                                            System.out.println("No existe esa opcion!");
+                                                    }
+
+                                                    break;
+                                                }
+
+                                                default:
+                                                    System.out.println("No existe esa opcion!");
+                                            }
+                                        }
+
                                         break;
                                     }
+                                    
                                     case 4: {
                                         System.exit(0);
                                         break;
