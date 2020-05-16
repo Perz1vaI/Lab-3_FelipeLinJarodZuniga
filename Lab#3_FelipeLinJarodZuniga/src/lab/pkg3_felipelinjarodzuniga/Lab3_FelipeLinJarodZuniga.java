@@ -71,6 +71,180 @@ public class Lab3_FelipeLinJarodZuniga {
                                                 int locales = sc.nextInt();
                                                 switch (locales) {
                                                     case 1: {
+                                                        int cant_tiendas = 0;
+                                                        System.out.println("Ingrese el nombre de la tienda: ");
+                                                        sc.nextLine();
+                                                        String nombre = sc.nextLine();
+                                                        for (Personas e : Empleado) {
+                                                            System.out.println("Posicion " + Empleado.indexOf(e) + ": " + e);
+                                                        }
+                                                        System.out.println("Ingrese la posicion del empleado que quiere usted convertir a gerente");
+                                                        int posicion1 = sc.nextInt();
+                                                        tienda.add(new Tiendas(nombre, (Empleados) Empleado.get(posicion1)));
+                                                        tienda.get(cant_tiendas).getListaE().remove(posicion1);
+
+                                                        for (Personas e : Empleado) {
+                                                            System.out.println("Posicion " + Empleado.indexOf(e) + ": " + e);
+                                                        }
+                                                        System.out.println("Cuantos empleados va agregar");
+                                                        int veces1 = sc.nextInt();
+                                                        while (veces1 < Empleado.size()) {
+                                                            System.out.println("No existe esa cantidad de empleados");
+                                                            System.out.println("Cuantos empleados va agregar");
+                                                            veces1 = sc.nextInt();
+                                                        }
+                                                        for (int i = 0; i < veces1; i++) {
+                                                            System.out.println("Ingrese la posicion del empleado que va agregar");
+                                                            int posicion_empleado = sc.nextInt();
+
+                                                            tienda.get(cant_tiendas).getListaE().add(Empleado.get(posicion_empleado));
+                                                            tienda.get(cant_tiendas).getListaE().remove(posicion_empleado);
+                                                        }
+
+                                                        System.out.println("Que productos va a agregar 1. Ropa 2. Juguetes");
+                                                        int opcion_crear_tienda = sc.nextInt();
+                                                        switch (opcion_crear_tienda) {
+                                                            case 1: {
+                                                                for (Productos r : ropa) {
+                                                                    System.out.println("Posicion " + ropa.indexOf(r) + " :" + r);
+                                                                }
+                                                                System.out.println("Cuantos productos va agregar");
+                                                                int veces2 = sc.nextInt();
+                                                                System.out.println("tamano " + ropa.size());
+                                                                while (veces2 < ropa.size()) {
+                                                                    System.out.println("No puede meter esa cantidad, no hay esa cantidad en el inventario");
+                                                                    System.out.println("Cuantos productos va agregar");
+                                                                    veces2 = sc.nextInt();
+                                                                }
+                                                                for (int i = 0; i < veces2; i++) {
+                                                                    System.out.println("Ingrese la posicion del prodcuto que desea agregar");
+                                                                    int posicion_ropa = sc.nextInt();
+
+                                                                    tienda.get(cant_tiendas).getListaP().add(ropa.get(posicion_ropa));
+
+                                                                }
+
+                                                                break;
+                                                            }
+
+                                                            case 3: {
+                                                                for (Productos r : Juguetes) {
+                                                                    System.out.println("Posicion " + Juguetes.indexOf(r) + " :" + r);
+                                                                }
+                                                                System.out.println("Cuantos productos va agregar");
+                                                                int veces2 = sc.nextInt();
+                                                                while (veces2 < Juguetes.size()) {
+                                                                    System.out.println("No puede meter esa cantidad, no hay esa cantidad en el inventario");
+                                                                    veces2 = sc.nextInt();
+                                                                }
+                                                                for (int i = 0; i < veces2; i++) {
+                                                                    System.out.println("Ingrese la posicion del prodcuto que desea agregar");
+                                                                    int posicion_juguetes = sc.nextInt();
+
+                                                                    tienda.get(cant_tiendas).getListaP().add(Juguetes.get(posicion_juguetes));
+
+                                                                }
+
+                                                                break;
+                                                            }
+                                                            default:
+                                                                System.out.println("No existe esa opcion");
+                                                        }
+
+                                                        cant_tiendas++;
+
+                                                        break;
+                                                    }
+                                                    case 2: {
+                                                        int cant_quiosco = 0;
+                                                        for (Locales l : tienda) {
+                                                            System.out.println("Posicion " + tienda.indexOf(l) + " : " + l);
+                                                        }
+
+                                                        System.out.println("Ingrese la posicion de la tienda que quiere convertir en quiosco");
+                                                        int posicion_quiosco = sc.nextInt();
+
+                                                        for (Personas e : Empleado) {
+                                                            System.out.println("Posicion " + Empleado.indexOf(e) + ": " + e);
+                                                        }
+
+                                                        System.out.println("Ingrese la posicion del empleado que quiere usted convertir a gerente");
+                                                        int posicion1 = sc.nextInt();
+                                                        quiosco.add(new Quiosco(tienda.get(posicion_quiosco).getNombre(), (Empleados) Empleado.get(posicion1)));
+                                                        quiosco.get(cant_quiosco).getListaE().remove(posicion1);
+
+                                                        for (Personas e : Empleado) {
+                                                            System.out.println("Posicion " + Empleado.indexOf(e) + ": " + e);
+                                                        }
+                                                        System.out.println("Cuantos empleados va agregar");
+                                                        int veces1 = sc.nextInt();
+                                                        while (veces1 < Empleado.size()) {
+                                                            System.out.println("No existe esa cantidad de empleados");
+                                                            System.out.println("Cuantos empleados va agregar");
+                                                            veces1 = sc.nextInt();
+                                                        }
+                                                        for (int i = 0; i < veces1; i++) {
+                                                            System.out.println("Ingrese la posicion del empleado que va agregar");
+                                                            int posicion_empleado = sc.nextInt();
+
+                                                            quiosco.get(cant_quiosco).getListaE().add(Empleado.get(posicion_empleado));
+                                                            quiosco.get(cant_quiosco).getListaE().remove(posicion_empleado);
+                                                        }
+
+                                                        for (int i = 0; i < tienda.get(posicion_quiosco).getListaP().size(); i++) {
+                                                            quiosco.get(cant_quiosco).getListaP().get(i).setPrecio(tienda.get(cant_quiosco).getListaP().get(i).getPrecio() / 0.50);
+
+                                                        }
+
+                                                        break;
+                                                    }
+                                                    case 3: {
+                                                        int cant_bar = 0;
+                                                        System.out.println("Ingrese el nombre de la tienda: ");
+                                                        sc.nextLine();
+                                                        String nombre = sc.nextLine();
+                                                        for (Personas e : Empleado) {
+                                                            System.out.println("Posicion " + Empleado.indexOf(e) + ": " + e);
+                                                        }
+                                                        System.out.println("Ingrese la posicion del empleado que quiere usted convertir a gerente");
+                                                        int posicion1 = sc.nextInt();
+                                                        bar.add(new Tiendas(nombre, (Empleados) Empleado.get(posicion1)));
+                                                        bar.get(cant_bar).getListaE().remove(posicion1);
+
+                                                        for (Personas e : Empleado) {
+                                                            System.out.println("Posicion " + Empleado.indexOf(e) + ": " + e);
+                                                        }
+                                                        System.out.println("Cuantos empleados va agregar");
+                                                        int veces1 = sc.nextInt();
+                                                        while (veces1 < Empleado.size()) {
+                                                            System.out.println("No existe esa cantidad de empleados");
+                                                            System.out.println("Cuantos empleados va agregar");
+                                                            veces1 = sc.nextInt();
+                                                        }
+                                                        for (int i = 0; i < veces1; i++) {
+                                                            System.out.println("Ingrese la posicion del empleado que va agregar");
+                                                            int posicion_empleado = sc.nextInt();
+
+                                                            bar.get(cant_bar).getListaE().add(Empleado.get(posicion_empleado));
+                                                            bar.get(cant_bar).getListaE().remove(posicion_empleado);
+                                                        }
+
+                                                        for (Productos r : comida) {
+                                                            System.out.println("Posicion " + comida.indexOf(r) + " :" + r);
+                                                        }
+                                                        System.out.println("Cuantos productos va agregar");
+                                                        int veces2 = sc.nextInt();
+                                                        while (veces2 < comida.size()) {
+                                                            System.out.println("No puede meter esa cantidad, no hay esa cantidad en el inventario");
+                                                            veces2 = sc.nextInt();
+                                                        }
+                                                        for (int i = 0; i < veces2; i++) {
+                                                            System.out.println("Ingrese la posicion del prodcuto que desea agregar");
+                                                            int posicion_comida = sc.nextInt();
+
+                                                            bar.get(cant_bar).getListaP().add(comida.get(posicion_comida));
+
+                                                        }
 
                                                         break;
                                                     }

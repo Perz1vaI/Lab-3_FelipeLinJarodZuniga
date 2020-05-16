@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class Locales {
 
     protected String nombre;
-    protected ArrayList<Empleados> listaE = new ArrayList();
+    protected ArrayList<Personas> listaE = new ArrayList();
     protected ArrayList<Productos> listaP = new ArrayList();
-    protected Empleados Gerente;
+    protected Personas Gerente;
 
-    public Locales(String nombre, Empleados Gerente) {
+    public Locales(String nombre, Personas Gerente) {
         this.nombre = nombre;
         this.Gerente = Gerente;
     }
@@ -22,11 +22,11 @@ public class Locales {
         this.nombre = nombre;
     }
 
-    public ArrayList<Empleados> getListaE() {
+    public ArrayList<Personas> getListaE() {
         return listaE;
     }
 
-    public void setListaE(ArrayList<Empleados> listaE) {
+    public void setListaE(ArrayList<Personas> listaE) {
         this.listaE = listaE;
     }
 
@@ -38,11 +38,11 @@ public class Locales {
         this.listaP = listaP;
     }
 
-    public Empleados getGerente() {
+    public Personas getGerente() {
         return Gerente;
     }
 
-    public void setGerente(Empleados Gerente) {
+    public void setGerente(Personas Gerente) {
         this.Gerente = Gerente;
     }
 
