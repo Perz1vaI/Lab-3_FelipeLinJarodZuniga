@@ -32,6 +32,8 @@ public class Lab3_FelipeLinJarodZuniga {
         ArrayList<Locales> bar = new ArrayList();
         ArrayList<Locales> quiosco = new ArrayList();
         ArrayList<Personas> Empleado = new ArrayList();
+        ArrayList<Personas> Clientes = new ArrayList();
+        ArrayList co = new ArrayList();
         Scanner sc = new Scanner(System.in);
         String master = "SUDO", contra = "54321";
         ArrayList user = new ArrayList();
@@ -353,12 +355,15 @@ public class Lab3_FelipeLinJarodZuniga {
                                 submenuadmi = sc.nextInt();
                             }
                             c = 1;
-                        } else if (user.size() >= 0) {
-                            for (int i = 0; i <= user.size(); i++) {
-                                if (user.get(i).equals(us)) {
-                                    if (pas.get(i).equals(cn)) {
+                        } else if (Clientes.size() >= 0) {
+                            int v = 0;
+                            for (int i = 0; i < Clientes.size(); i++) {
+                                System.out.println(Clientes.get(i).getUsername());
+                                if (us.equals(Clientes.get(i).getUsername())) {
+                                    if (Clientes.get(i).getContra().equals(cn)) {
                                         System.out.println(ANSI_GREEN + "Bienvenido gran clente  " + us);
                                         c = 1;
+                                        v = 1;
                                         break;
                                     } else {
                                         System.out.println(ANSI_RED + "Contraseña Incorrecta");
@@ -369,6 +374,50 @@ public class Lab3_FelipeLinJarodZuniga {
                                     c = 0;
                                 }
                             }
+                            if (v == 1) {
+                                int o=0;
+                                System.out.println("1.Tienda \n" + "2. Bar \n" + "3.Quiosco");
+                                System.out.println("");
+                                System.out.println("Ingrese el tipo de tienda a la que desea ingresar");
+                                int t = sc.nextInt();
+                                switch (t) {
+                                    case 1:
+                                        
+                                        for (int i = 0; i < tienda.size(); i++) {
+                                            System.out.println(i + "" + tienda.get(i));
+                                        }
+                                        System.out.println("A cual tienda desea entrar?");
+                                        o=sc.nextInt();
+                                        for (int i = 0; i < tienda.get(o).getListaP().size(); i++) {
+                                            System.out.println( tienda.get(o).getListaP().get(i)+"---------"+tienda.get(o).getListaP().get(i).getPrecio());
+                                        }
+                                        break;
+                                    case 2:
+                                        for (int i = 0; i < bar.size(); i++) {
+                                            System.out.println(i + "" + bar.get(i));
+                                        }
+                                        System.out.println("A cual Bar desea entrar?");
+                                        o=sc.nextInt();
+                                        for (int i = 0; i < bar.get(o).getListaP().size(); i++) {
+                                            System.out.println( bar.get(o).getListaP().get(i)+"--------"+bar.get(o).getListaP().get(i).getPrecio());
+                                        }
+                                        break;
+                                    case 3:
+                                        for (int i = 0; i < quiosco.size(); i++) {
+                                            System.out.println(i + "" + quiosco.get(i));
+                                        }
+                                        System.out.println("A cual quiosco desea entrar?");
+                                        o=sc.nextInt();
+                                        for (int i = 0; i < quiosco.get(o).getListaP().size(); i++) {
+                                            System.out.println( quiosco.get(o).getListaP().get(i)+"--------"+quiosco.get(o).getListaP().get(i).getPrecio());
+                                        }
+                                        break;
+                                    default:
+                                        System.out.println("Esa opcion no existe");
+                                        break;
+                                }
+
+                            }
 
                         } else {
                             System.out.println(ANSI_RED + "Aun no se ha creado ningun usuario");
@@ -377,23 +426,36 @@ public class Lab3_FelipeLinJarodZuniga {
                     }
                     break;
                 case 2:
+                    System.out.println("Ingrese su ID");
+                    String id = sc.next();
                     System.out.println("Ingrese su nombre de usuario");
                     String nuvusu = sc.next();
-                    System.out.println("Ingrese su cntraseña");
+                    System.out.println("Ingrese su contraseña");
                     String nupas = sc.next();
+
+                    System.out.println("Ingrese su correo");
+                    String corr = sc.next();
+
+                    System.out.println("Ingrese su nombre");
+                    String nom = sc.next();
+                    System.out.println("Ingrese su fecha de nacimento");
+                    String nac = sc.next();
+                    System.out.println("Ingrese su efectivo");
+                    int cash = sc.nextInt();
                     System.out.print("Procesando../");
                     System.out.print("../");
                     System.out.print("../");
                     System.out.print("../");
                     System.out.println("");
-                    user.add(nuvusu);
-                    pas.add(nupas);
+
+                    Clientes.add(new Clientes(cash, co, id, nuvusu, nupas, corr, nom, nac));
                     System.out.println("");
                     System.out.println(ANSI_GREEN + "Agregado correctamente");
                     System.out.println("");
                     break;
+                  
                 case 3:
-                    System.out.println(ANSI_RED + "Gracias por elegirnos");
+                   System.out.println(ANSI_RED + "Gracias por elegirnos");
                     p = 1;
                     break;
                 default:
