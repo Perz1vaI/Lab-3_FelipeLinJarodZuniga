@@ -349,24 +349,24 @@ public class Lab3_FelipeLinJarodZuniga {
                                     }
                                     case 2: {
                                         // modificar
-                                        System.out.println("1. Modificar Locales \n2. Modificar Empleados \n3. Modificar Productos");
+                                        System.out.println(ANSI_GREEN +"1. Modificar Locales \n2. Modificar Empleados \n3. Modificar Productos");
                                         int opcion_modificar = sc.nextInt();
                                         while (opcion_modificar != 4) {
                                             switch (opcion_modificar) {
                                                 case 1: {
-                                                    System.out.println("1. Modificar Tiendas \n2. Modificar Quioscos \n3. Modificar Bares");
+                                                    System.out.println(ANSI_GREEN +"1. Modificar Tiendas \n2. Modificar Quioscos \n3. Modificar Bares");
                                                     int opcion_modificar2 = sc.nextInt();
                                                     switch (opcion_modificar2) {
                                                         case 1: {
 
                                                             for (Locales locales : tienda) {
-                                                                System.out.println("Posicion " + tienda.indexOf(locales) + " :" + locales);
+                                                                System.out.println(ANSI_GREEN +"Posicion " + tienda.indexOf(locales) + " :" + locales);
                                                             }
 
-                                                            System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere modificar: ");
                                                             int posicion = sc.nextInt();
 
-                                                            System.out.println("Ingrese el nuevo nombre: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese el nuevo nombre: ");
                                                             String nombre = sc.nextLine();
 
                                                             tienda.get(posicion).setNombre(nombre);
@@ -376,13 +376,13 @@ public class Lab3_FelipeLinJarodZuniga {
                                                         case 2: {
 
                                                             for (Locales locales : quiosco) {
-                                                                System.out.println("Posicion " + quiosco.indexOf(locales) + " :" + locales);
+                                                                System.out.println(ANSI_GREEN +"ANSI_GREEN +Posicion " + quiosco.indexOf(locales) + " :" + locales);
                                                             }
 
-                                                            System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere modificar: ");
                                                             int posicion = sc.nextInt();
 
-                                                            System.out.println("Ingrese el nuevo nombre: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese el nuevo nombre: ");
                                                             String nombre = sc.nextLine();
 
                                                             quiosco.get(posicion).setNombre(nombre);
@@ -391,13 +391,13 @@ public class Lab3_FelipeLinJarodZuniga {
                                                         }
                                                         case 3: {
                                                             for (Locales locales : bar) {
-                                                                System.out.println("Posicion " + bar.indexOf(locales) + " :" + locales);
+                                                                System.out.println(ANSI_GREEN +"Posicion " + bar.indexOf(locales) + " :" + locales);
                                                             }
 
-                                                            System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere modificar: ");
                                                             int posicion = sc.nextInt();
 
-                                                            System.out.println("Ingrese el nuevo nombre: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese el nuevo nombre: ");
                                                             String nombre = sc.nextLine();
 
                                                             bar.get(posicion).setNombre(nombre);
@@ -405,17 +405,17 @@ public class Lab3_FelipeLinJarodZuniga {
                                                             break;
                                                         }
                                                         default:
-                                                            System.out.println("No existe esa opcion!");
+                                                            System.out.println(ANSI_GREEN +"No existe esa opcion!");
                                                     }
 
                                                     break;
                                                 }
                                                 case 2: {
                                                     for (Personas pa : Empleado) {
-                                                        System.out.println("Posicion " + Empleado.indexOf(pa) + " :" + pa);
+                                                        System.out.println(ANSI_GREEN +"Posicion " + Empleado.indexOf(pa) + " :" + pa);
                                                     }
 
-                                                    System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                    System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere modificar: ");
                                                     int posicion = sc.nextInt();
 
                                                     System.out.println(ANSI_GREEN + "Ingrese su ID: ");
@@ -439,14 +439,14 @@ public class Lab3_FelipeLinJarodZuniga {
                                                     break;
                                                 }
                                                 case 3: {
-                                                    System.out.println("1. Modificar Ropa \n2. Modificar Juguetes \n3. Modificar Comida");
+                                                    System.out.println(ANSI_GREEN +"1. Modificar Ropa \n2. Modificar Juguetes \n3. Modificar Comida");
                                                     int opcion_modificar2 = sc.nextInt();
                                                     switch (opcion_modificar2) {
                                                         case 1: {
                                                             for (Productos pa : ropa) {
-                                                                System.out.println("Posicion " + ropa.indexOf(pa) + " :" + pa);
+                                                                System.out.println(ANSI_GREEN +"Posicion " + ropa.indexOf(pa) + " :" + pa);
                                                             }
-                                                            System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere modificar: ");
                                                             int posicion = sc.nextInt();
 
                                                             System.out.println(ANSI_GREEN + "El nombre de la ropa: ");
@@ -468,9 +468,9 @@ public class Lab3_FelipeLinJarodZuniga {
                                                         }
                                                         case 2: {
                                                             for (Productos pa : Juguetes) {
-                                                                System.out.println("Posicion " + Juguetes.indexOf(pa) + " :" + pa);
+                                                                System.out.println(ANSI_GREEN +"Posicion " + Juguetes.indexOf(pa) + " :" + pa);
                                                             }
-                                                            System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere modificar: ");
                                                             int posicion = sc.nextInt();
 
                                                             System.out.println(ANSI_GREEN + "El nombre del juguete: ");
@@ -489,9 +489,9 @@ public class Lab3_FelipeLinJarodZuniga {
                                                         }
                                                         case 3: {
                                                             for (Productos pa : comida) {
-                                                                System.out.println("Posicion " + comida.indexOf(pa) + " :" + pa);
+                                                                System.out.println(ANSI_GREEN +"Posicion " + comida.indexOf(pa) + " :" + pa);
                                                             }
-                                                            System.out.println("Ingrese la posicion que quiere modificar: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere modificar: ");
                                                             int posicion = sc.nextInt();
 
                                                             System.out.println(ANSI_GREEN + "El nombre de la comida: ");
@@ -512,35 +512,35 @@ public class Lab3_FelipeLinJarodZuniga {
                                                             break;
                                                         }
                                                         default:
-                                                            System.out.println("No existe esa opcion!");
+                                                            System.out.println(ANSI_GREEN +"No existe esa opcion!");
                                                     }
 
                                                     break;
                                                 }
 
                                                 default:
-                                                    System.out.println("No existe esa opcion!");
+                                                    System.out.println(ANSI_GREEN +"No existe esa opcion!");
                                             }
                                         }
 
                                         break;
                                     }
                                     case 3: {
-                                        System.out.println("1. Eliminar Locales \n2.  Eliminar Empleados \n3.  Eliminar Productos");
+                                        System.out.println(ANSI_GREEN +"1. Eliminar Locales \n2.  Eliminar Empleados \n3.  Eliminar Productos");
                                         int opcion_modificar = sc.nextInt();
                                         while (opcion_modificar != 4) {
                                             switch (opcion_modificar) {
                                                 case 1: {
-                                                    System.out.println("1.  Eliminar Tiendas \n2.  Eliminar Quioscos \n3.  Eliminar Bares");
+                                                    System.out.println(ANSI_GREEN +"1.  Eliminar Tiendas \n2.  Eliminar Quioscos \n3.  Eliminar Bares");
                                                     int opcion_modificar2 = sc.nextInt();
                                                     switch (opcion_modificar2) {
                                                         case 1: {
 
                                                             for (Locales locales : tienda) {
-                                                                System.out.println("Posicion " + tienda.indexOf(locales) + " :" + locales);
+                                                                System.out.println(ANSI_GREEN +"Posicion " + tienda.indexOf(locales) + " :" + locales);
                                                             }
 
-                                                            System.out.println("Ingrese la posicion que quiere  Eliminar: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere  Eliminar: ");
                                                             int posicion = sc.nextInt();
 
                                                             
@@ -552,10 +552,10 @@ public class Lab3_FelipeLinJarodZuniga {
                                                         case 2: {
 
                                                             for (Locales locales : quiosco) {
-                                                                System.out.println("Posicion " + quiosco.indexOf(locales) + " :" + locales);
+                                                                System.out.println(ANSI_GREEN +"Posicion " + quiosco.indexOf(locales) + " :" + locales);
                                                             }
 
-                                                            System.out.println("Ingrese la posicion que quiere  Eliminar: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere  Eliminar: ");
                                                             int posicion = sc.nextInt();
 
                                                            
@@ -566,10 +566,10 @@ public class Lab3_FelipeLinJarodZuniga {
                                                         }
                                                         case 3: {
                                                             for (Locales locales : bar) {
-                                                                System.out.println("Posicion " + bar.indexOf(locales) + " :" + locales);
+                                                                System.out.println(ANSI_GREEN +"Posicion " + bar.indexOf(locales) + " :" + locales);
                                                             }
 
-                                                            System.out.println("Ingrese la posicion que quiere Eliminar: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere Eliminar: ");
                                                             int posicion = sc.nextInt();
 
                                                            
@@ -579,17 +579,17 @@ public class Lab3_FelipeLinJarodZuniga {
                                                             break;
                                                         }
                                                         default:
-                                                            System.out.println("No existe esa opcion!");
+                                                            System.out.println(ANSI_GREEN +"No existe esa opcion!");
                                                     }
 
                                                     break;
                                                 }
                                                 case 2: {
                                                     for (Personas pa : Empleado) {
-                                                        System.out.println("Posicion " + Empleado.indexOf(pa) + " :" + pa);
+                                                        System.out.println(ANSI_GREEN +"Posicion " + Empleado.indexOf(pa) + " :" + pa);
                                                     }
 
-                                                    System.out.println("Ingrese la posicion que quiere Eliminar: ");
+                                                    System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere Eliminar: ");
                                                     int posicion = sc.nextInt();
 
                                                     Empleado.remove(posicion);
@@ -597,14 +597,14 @@ public class Lab3_FelipeLinJarodZuniga {
                                                     break;
                                                 }
                                                 case 3: {
-                                                    System.out.println("1. Eliminar Ropa \n2. Eliminar Juguetes \n3. Eliminar Comida");
+                                                    System.out.println(ANSI_GREEN +"1. Eliminar Ropa \n2. Eliminar Juguetes \n3. Eliminar Comida");
                                                     int opcion_modificar2 = sc.nextInt();
                                                     switch (opcion_modificar2) {
                                                         case 1: {
                                                             for (Productos pa : ropa) {
-                                                                System.out.println("Posicion " + ropa.indexOf(pa) + " :" + pa);
+                                                                System.out.println(ANSI_GREEN +"Posicion " + ropa.indexOf(pa) + " :" + pa);
                                                             }
-                                                            System.out.println("Ingrese la posicion que quiere Eliminar: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere Eliminar: ");
                                                             int posicion = sc.nextInt();
 
                                                            
@@ -615,9 +615,9 @@ public class Lab3_FelipeLinJarodZuniga {
                                                         }
                                                         case 2: {
                                                             for (Productos pa : Juguetes) {
-                                                                System.out.println("Posicion " + Juguetes.indexOf(pa) + " :" + pa);
+                                                                System.out.println(ANSI_GREEN +"Posicion " + Juguetes.indexOf(pa) + " :" + pa);
                                                             }
-                                                            System.out.println("Ingrese la posicion que quiere Eliminar: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere Eliminar: ");
                                                             int posicion = sc.nextInt();
 
                                                             
@@ -628,9 +628,9 @@ public class Lab3_FelipeLinJarodZuniga {
                                                         }
                                                         case 3: {
                                                             for (Productos pa : comida) {
-                                                                System.out.println("Posicion " + comida.indexOf(pa) + " :" + pa);
+                                                                System.out.println(ANSI_GREEN +"Posicion " + comida.indexOf(pa) + " :" + pa);
                                                             }
-                                                            System.out.println("Ingrese la posicion que quiere Eliminar: ");
+                                                            System.out.println(ANSI_GREEN +"Ingrese la posicion que quiere Eliminar: ");
                                                             int posicion = sc.nextInt();
 
                                                            
@@ -640,14 +640,14 @@ public class Lab3_FelipeLinJarodZuniga {
                                                             break;
                                                         }
                                                         default:
-                                                            System.out.println("No existe esa opcion!");
+                                                            System.out.println(ANSI_GREEN +"No existe esa opcion!");
                                                     }
 
                                                     break;
                                                 }
 
                                                 default:
-                                                    System.out.println("No existe esa opcion!");
+                                                    System.out.println(ANSI_GREEN +"No existe esa opcion!");
                                             }
                                         }
 
@@ -705,12 +705,12 @@ public class Lab3_FelipeLinJarodZuniga {
                                         for (int i = 0; i < tienda.get(o).getListaP().size(); i++) {
                                             System.out.println(ANSI_GREEN + tienda.get(o).getListaP().get(i) + "---------" + tienda.get(o).getListaP().get(i).getPrecio());
                                         }
-                                        System.out.println("Que producto desea comprar");
+                                        System.out.println(ANSI_GREEN +"Que producto desea comprar");
                                         s=sc.nextInt();
-                                        System.out.println("Que cantidad desea comprar");
+                                        System.out.println(ANSI_GREEN +"Que cantidad desea comprar");
                                         j=sc.nextInt();
                                         cd=tienda.get(s).getListaP().get(s).getPrecio()*j;
-                                        System.out.println("Total es "+cd);
+                                        System.out.println(ANSI_GREEN +"Total es "+cd);
                                         
                                         break;
                                     case 2:
@@ -722,12 +722,12 @@ public class Lab3_FelipeLinJarodZuniga {
                                         for (int i = 0; i < bar.get(o).getListaP().size(); i++) {
                                             System.out.println(ANSI_GREEN + bar.get(o).getListaP().get(i) + "--------" + bar.get(o).getListaP().get(i).getPrecio());
                                         }
-                                        System.out.println("Que producto desea comprar");
+                                        System.out.println(ANSI_GREEN +"Que producto desea comprar");
                                         s=sc.nextInt();
-                                        System.out.println("Que cantidad desea comprar");
+                                        System.out.println(ANSI_GREEN +"Que cantidad desea comprar");
                                         j=sc.nextInt();
                                         cd=bar.get(s).getListaP().get(s).getPrecio()*j;
-                                        System.out.println("Total es "+cd);
+                                        System.out.println(ANSI_GREEN +"Total es "+cd);
                                         break;
                                     case 3:
                                         for (int i = 0; i < quiosco.size(); i++) {
@@ -738,12 +738,12 @@ public class Lab3_FelipeLinJarodZuniga {
                                         for (int i = 0; i < quiosco.get(o).getListaP().size(); i++) {
                                             System.out.println(ANSI_GREEN + quiosco.get(o).getListaP().get(i) + "--------" + quiosco.get(o).getListaP().get(i).getPrecio());
                                         }
-                                        System.out.println("Que producto desea comprar");
+                                        System.out.println(ANSI_GREEN +"Que producto desea comprar");
                                         s=sc.nextInt();
-                                        System.out.println("Que cantidad desea comprar");
+                                        System.out.println(ANSI_GREEN +"Que cantidad desea comprar");
                                         j=sc.nextInt();
                                         cd=quiosco.get(s).getListaP().get(s).getPrecio()*j;
-                                        System.out.println("Total es "+cd);
+                                        System.out.println(ANSI_GREEN +"Total es "+cd);
                                         break;
                                     default:
                                         System.out.println(ANSI_GREEN + "Esa opcion no existe");
