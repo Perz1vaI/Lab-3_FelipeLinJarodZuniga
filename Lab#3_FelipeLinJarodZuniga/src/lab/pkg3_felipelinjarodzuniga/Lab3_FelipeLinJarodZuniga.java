@@ -74,52 +74,52 @@ public class Lab3_FelipeLinJarodZuniga {
                                                 switch (locales) {
                                                     case 1: {
                                                         int cant_tiendas = 0;
-                                                        System.out.println("Ingrese el nombre de la tienda: ");
+                                                        System.out.println(ANSI_GREEN+"Ingrese el nombre de la tienda: ");
                                                         sc.nextLine();
                                                         String nombre = sc.nextLine();
                                                         for (Personas e : Empleado) {
-                                                            System.out.println("Posicion " + Empleado.indexOf(e) + ": " + e);
+                                                            System.out.println(ANSI_GREEN+"Posicion " + Empleado.indexOf(e) + ": " + e);
                                                         }
-                                                        System.out.println("Ingrese la posicion del empleado que quiere usted convertir a gerente");
+                                                        System.out.println(ANSI_GREEN+"Ingrese la posicion del empleado que quiere usted convertir a gerente");
                                                         int posicion1 = sc.nextInt();
                                                         tienda.add(new Tiendas(nombre, (Empleados) Empleado.get(posicion1)));
                                                         tienda.get(cant_tiendas).getListaE().remove(posicion1);
 
                                                         for (Personas e : Empleado) {
-                                                            System.out.println("Posicion " + Empleado.indexOf(e) + ": " + e);
+                                                            System.out.println(ANSI_GREEN+"Posicion " + Empleado.indexOf(e) + ": " + e);
                                                         }
-                                                        System.out.println("Cuantos empleados va agregar");
+                                                        System.out.println(ANSI_GREEN+"Cuantos empleados va agregar");
                                                         int veces1 = sc.nextInt();
                                                         while (veces1 < Empleado.size()) {
-                                                            System.out.println("No existe esa cantidad de empleados");
-                                                            System.out.println("Cuantos empleados va agregar");
+                                                            System.out.println(ANSI_GREEN+"No existe esa cantidad de empleados");
+                                                            System.out.println(ANSI_GREEN+"Cuantos empleados va agregar");
                                                             veces1 = sc.nextInt();
                                                         }
                                                         for (int i = 0; i < veces1; i++) {
-                                                            System.out.println("Ingrese la posicion del empleado que va agregar");
+                                                            System.out.println(ANSI_GREEN+"Ingrese la posicion del empleado que va agregar");
                                                             int posicion_empleado = sc.nextInt();
 
                                                             tienda.get(cant_tiendas).getListaE().add(Empleado.get(posicion_empleado));
                                                             tienda.get(cant_tiendas).getListaE().remove(posicion_empleado);
                                                         }
 
-                                                        System.out.println("Que productos va a agregar 1. Ropa 2. Juguetes");
+                                                        System.out.println(ANSI_GREEN+"Que productos va a agregar 1. Ropa 2. Juguetes");
                                                         int opcion_crear_tienda = sc.nextInt();
                                                         switch (opcion_crear_tienda) {
                                                             case 1: {
                                                                 for (Productos r : ropa) {
-                                                                    System.out.println("Posicion " + ropa.indexOf(r) + " :" + r);
+                                                                    System.out.println(ANSI_GREEN+"Posicion " + ropa.indexOf(r) + " :" + r);
                                                                 }
-                                                                System.out.println("Cuantos productos va agregar");
+                                                                System.out.println(ANSI_GREEN+"Cuantos productos va agregar");
                                                                 int veces2 = sc.nextInt();
-                                                                System.out.println("tamano " + ropa.size());
+                                                                System.out.println(ANSI_GREEN+"tamano " + ropa.size());
                                                                 while (veces2 < ropa.size()) {
-                                                                    System.out.println("No puede meter esa cantidad, no hay esa cantidad en el inventario");
-                                                                    System.out.println("Cuantos productos va agregar");
+                                                                    System.out.println(ANSI_GREEN+"No puede meter esa cantidad, no hay esa cantidad en el inventario");
+                                                                    System.out.println(ANSI_GREEN+"Cuantos productos va agregar");
                                                                     veces2 = sc.nextInt();
                                                                 }
                                                                 for (int i = 0; i < veces2; i++) {
-                                                                    System.out.println("Ingrese la posicion del prodcuto que desea agregar");
+                                                                    System.out.println(ANSI_GREEN+"Ingrese la posicion del prodcuto que desea agregar");
                                                                     int posicion_ropa = sc.nextInt();
 
                                                                     tienda.get(cant_tiendas).getListaP().add(ropa.get(posicion_ropa));
@@ -131,16 +131,16 @@ public class Lab3_FelipeLinJarodZuniga {
 
                                                             case 3: {
                                                                 for (Productos r : Juguetes) {
-                                                                    System.out.println("Posicion " + Juguetes.indexOf(r) + " :" + r);
+                                                                    System.out.println(ANSI_GREEN+"Posicion " + Juguetes.indexOf(r) + " :" + r);
                                                                 }
-                                                                System.out.println("Cuantos productos va agregar");
+                                                                System.out.println(ANSI_GREEN+"Cuantos productos va agregar");
                                                                 int veces2 = sc.nextInt();
                                                                 while (veces2 < Juguetes.size()) {
-                                                                    System.out.println("No puede meter esa cantidad, no hay esa cantidad en el inventario");
+                                                                    System.out.println(ANSI_GREEN+"No puede meter esa cantidad, no hay esa cantidad en el inventario");
                                                                     veces2 = sc.nextInt();
                                                                 }
                                                                 for (int i = 0; i < veces2; i++) {
-                                                                    System.out.println("Ingrese la posicion del prodcuto que desea agregar");
+                                                                    System.out.println(ANSI_GREEN+"Ingrese la posicion del prodcuto que desea agregar");
                                                                     int posicion_juguetes = sc.nextInt();
 
                                                                     tienda.get(cant_tiendas).getListaP().add(Juguetes.get(posicion_juguetes));
@@ -150,7 +150,7 @@ public class Lab3_FelipeLinJarodZuniga {
                                                                 break;
                                                             }
                                                             default:
-                                                                System.out.println("No existe esa opcion");
+                                                                System.out.println(ANSI_GREEN+"No existe esa opcion");
                                                         }
 
                                                         cant_tiendas++;
@@ -160,33 +160,33 @@ public class Lab3_FelipeLinJarodZuniga {
                                                     case 2: {
                                                         int cant_quiosco = 0;
                                                         for (Locales l : tienda) {
-                                                            System.out.println("Posicion " + tienda.indexOf(l) + " : " + l);
+                                                            System.out.println(ANSI_GREEN+"Posicion " + tienda.indexOf(l) + " : " + l);
                                                         }
 
-                                                        System.out.println("Ingrese la posicion de la tienda que quiere convertir en quiosco");
+                                                        System.out.println(ANSI_GREEN+"Ingrese la posicion de la tienda que quiere convertir en quiosco");
                                                         int posicion_quiosco = sc.nextInt();
 
                                                         for (Personas e : Empleado) {
-                                                            System.out.println("Posicion " + Empleado.indexOf(e) + ": " + e);
+                                                            System.out.println(ANSI_GREEN+"Posicion " + Empleado.indexOf(e) + ": " + e);
                                                         }
 
-                                                        System.out.println("Ingrese la posicion del empleado que quiere usted convertir a gerente");
+                                                        System.out.println(ANSI_GREEN+"Ingrese la posicion del empleado que quiere usted convertir a gerente");
                                                         int posicion1 = sc.nextInt();
                                                         quiosco.add(new Quiosco(tienda.get(posicion_quiosco).getNombre(), (Empleados) Empleado.get(posicion1)));
                                                         quiosco.get(cant_quiosco).getListaE().remove(posicion1);
 
                                                         for (Personas e : Empleado) {
-                                                            System.out.println("Posicion " + Empleado.indexOf(e) + ": " + e);
+                                                            System.out.println(ANSI_GREEN+"Posicion " + Empleado.indexOf(e) + ": " + e);
                                                         }
-                                                        System.out.println("Cuantos empleados va agregar");
+                                                        System.out.println(ANSI_GREEN+"Cuantos empleados va agregar");
                                                         int veces1 = sc.nextInt();
                                                         while (veces1 < Empleado.size()) {
-                                                            System.out.println("No existe esa cantidad de empleados");
-                                                            System.out.println("Cuantos empleados va agregar");
+                                                            System.out.println(ANSI_GREEN+"No existe esa cantidad de empleados");
+                                                            System.out.println(ANSI_GREEN+"Cuantos empleados va agregar");
                                                             veces1 = sc.nextInt();
                                                         }
                                                         for (int i = 0; i < veces1; i++) {
-                                                            System.out.println("Ingrese la posicion del empleado que va agregar");
+                                                            System.out.println(ANSI_GREEN+"Ingrese la posicion del empleado que va agregar");
                                                             int posicion_empleado = sc.nextInt();
 
                                                             quiosco.get(cant_quiosco).getListaE().add(Empleado.get(posicion_empleado));
@@ -202,29 +202,29 @@ public class Lab3_FelipeLinJarodZuniga {
                                                     }
                                                     case 3: {
                                                         int cant_bar = 0;
-                                                        System.out.println("Ingrese el nombre de la tienda: ");
+                                                        System.out.println(ANSI_GREEN+"Ingrese el nombre de la tienda: ");
                                                         sc.nextLine();
                                                         String nombre = sc.nextLine();
                                                         for (Personas e : Empleado) {
-                                                            System.out.println("Posicion " + Empleado.indexOf(e) + ": " + e);
+                                                            System.out.println(ANSI_GREEN+"Posicion " + Empleado.indexOf(e) + ": " + e);
                                                         }
-                                                        System.out.println("Ingrese la posicion del empleado que quiere usted convertir a gerente");
+                                                        System.out.println(ANSI_GREEN+"Ingrese la posicion del empleado que quiere usted convertir a gerente");
                                                         int posicion1 = sc.nextInt();
                                                         bar.add(new Tiendas(nombre, (Empleados) Empleado.get(posicion1)));
                                                         bar.get(cant_bar).getListaE().remove(posicion1);
 
                                                         for (Personas e : Empleado) {
-                                                            System.out.println("Posicion " + Empleado.indexOf(e) + ": " + e);
+                                                            System.out.println(ANSI_GREEN+"Posicion " + Empleado.indexOf(e) + ": " + e);
                                                         }
-                                                        System.out.println("Cuantos empleados va agregar");
+                                                        System.out.println(ANSI_GREEN+"Cuantos empleados va agregar");
                                                         int veces1 = sc.nextInt();
                                                         while (veces1 < Empleado.size()) {
-                                                            System.out.println("No existe esa cantidad de empleados");
-                                                            System.out.println("Cuantos empleados va agregar");
+                                                            System.out.println(ANSI_GREEN+"No existe esa cantidad de empleados");
+                                                            System.out.println(ANSI_GREEN+"Cuantos empleados va agregar");
                                                             veces1 = sc.nextInt();
                                                         }
                                                         for (int i = 0; i < veces1; i++) {
-                                                            System.out.println("Ingrese la posicion del empleado que va agregar");
+                                                            System.out.println(ANSI_GREEN+"Ingrese la posicion del empleado que va agregar");
                                                             int posicion_empleado = sc.nextInt();
 
                                                             bar.get(cant_bar).getListaE().add(Empleado.get(posicion_empleado));
@@ -232,16 +232,16 @@ public class Lab3_FelipeLinJarodZuniga {
                                                         }
 
                                                         for (Productos r : comida) {
-                                                            System.out.println("Posicion " + comida.indexOf(r) + " :" + r);
+                                                            System.out.println(ANSI_GREEN+"Posicion " + comida.indexOf(r) + " :" + r);
                                                         }
-                                                        System.out.println("Cuantos productos va agregar");
+                                                        System.out.println(ANSI_GREEN+"Cuantos productos va agregar");
                                                         int veces2 = sc.nextInt();
                                                         while (veces2 < comida.size()) {
-                                                            System.out.println("No puede meter esa cantidad, no hay esa cantidad en el inventario");
+                                                            System.out.println(ANSI_GREEN+"No puede meter esa cantidad, no hay esa cantidad en el inventario");
                                                             veces2 = sc.nextInt();
                                                         }
                                                         for (int i = 0; i < veces2; i++) {
-                                                            System.out.println("Ingrese la posicion del prodcuto que desea agregar");
+                                                            System.out.println(ANSI_GREEN+"Ingrese la posicion del prodcuto que desea agregar");
                                                             int posicion_comida = sc.nextInt();
 
                                                             bar.get(cant_bar).getListaP().add(comida.get(posicion_comida));
@@ -251,26 +251,26 @@ public class Lab3_FelipeLinJarodZuniga {
                                                         break;
                                                     }
                                                     default:
-                                                        System.out.println("No existe otra opcion!");
+                                                        System.out.println(ANSI_GREEN+"No existe otra opcion!");
                                                 }
                                                 break;
                                             }
                                             case 3: {
 
-                                                System.out.println("Ingrese su ID: ");
+                                                System.out.println(ANSI_GREEN+"Ingrese su ID: ");
                                                 sc.nextLine();
                                                 String id = sc.nextLine();
-                                                System.out.println("Ingrese su usuario: ");
+                                                System.out.println(ANSI_GREEN+"Ingrese su usuario: ");
                                                 String username = sc.nextLine();
-                                                System.out.println("Ingrese su contraseña: ");
+                                                System.out.println(ANSI_GREEN+"Ingrese su contraseña: ");
                                                 String contra1 = sc.nextLine();
-                                                System.out.println("Ingrese su correo electronico: ");
+                                                System.out.println(ANSI_GREEN+"Ingrese su correo electronico: ");
                                                 String correo = sc.nextLine();
-                                                System.out.println("Ingrese su nombre completo: ");
+                                                System.out.println(ANSI_GREEN+"Ingrese su nombre completo: ");
                                                 String nombreC = sc.nextLine();
-                                                System.out.println("Ingrese su fecha de nacimiento(DD/MM/YYYY): ");
+                                                System.out.println(ANSI_GREEN+"Ingrese su fecha de nacimiento(DD/MM/YYYY): ");
                                                 String fecha = sc.nextLine();
-                                                System.out.println("Ingrese su horario de trabajo: ");
+                                                System.out.println(ANSI_GREEN+"Ingrese su horario de trabajo: ");
                                                 String horario = sc.nextLine();
 
                                                 Empleado.add(new Empleados(horario, 0, id, username, contra1, correo, nombreC, fecha));
@@ -283,48 +283,48 @@ public class Lab3_FelipeLinJarodZuniga {
 
                                                 switch (menucomida) {
                                                     case 1: {
-                                                        System.out.println("El nombre de la ropa: ");
+                                                        System.out.println(ANSI_GREEN+"El nombre de la ropa: ");
                                                         sc.nextLine();
                                                         String nom1 = sc.nextLine();
-                                                        System.out.println("La descripcion de la ropa: ");
+                                                        System.out.println(ANSI_GREEN+"La descripcion de la ropa: ");
                                                         String descrip1 = sc.nextLine();
-                                                        System.out.println("El precio de la ropa");
+                                                        System.out.println(ANSI_GREEN+"El precio de la ropa");
                                                         int precio1 = sc.nextInt();
-                                                        System.out.println("Ingrese el genero de la ropa");
+                                                        System.out.println(ANSI_GREEN+"Ingrese el genero de la ropa");
                                                         sc.nextLine();
                                                         String genero = sc.nextLine();
-                                                        System.out.println("Ingrese la talla de la ropa");
+                                                        System.out.println(ANSI_GREEN+"Ingrese la talla de la ropa");
                                                         String talla = sc.nextLine();
 
                                                         ropa.add(new Ropa(genero, talla, descrip1, nom1, precio1));
                                                         break;
                                                     }
                                                     case 2: {
-                                                        System.out.println("El nombre del juguete: ");
+                                                        System.out.println(ANSI_GREEN+"El nombre del juguete: ");
                                                         sc.nextLine();
                                                         String nom2 = sc.nextLine();
-                                                        System.out.println("La descripcion del producto: ");
+                                                        System.out.println(ANSI_GREEN+"La descripcion del producto: ");
                                                         String descrip2 = sc.nextLine();
-                                                        System.out.println("La descripcion del Juguete: ");
+                                                        System.out.println(ANSI_GREEN+"La descripcion del Juguete: ");
                                                         String descrip22 = sc.nextLine();
-                                                        System.out.println("El precio del juguete");
+                                                        System.out.println(ANSI_GREEN+"El precio del juguete");
                                                         int precio2 = sc.nextInt();
 
                                                         Juguetes.add(new Juguetes(descrip22, descrip2, nom2, precio2));
                                                         break;
                                                     }
                                                     case 3: {
-                                                        System.out.println("El nombre de la comida: ");
+                                                        System.out.println(ANSI_GREEN+"El nombre de la comida: ");
                                                         sc.nextLine();
                                                         String nom3 = sc.nextLine();
-                                                        System.out.println("La descripcion de la comida: ");
+                                                        System.out.println(ANSI_GREEN+"La descripcion de la comida: ");
                                                         String descrip3 = sc.nextLine();
-                                                        System.out.println("El precio de la comida: ");
+                                                        System.out.println(ANSI_GREEN+"El precio de la comida: ");
                                                         int precio3 = sc.nextInt();
-                                                        System.out.println("Ingrese 1. Comida 2. Bebida");
+                                                        System.out.println(ANSI_GREEN+"Ingrese 1. Comida 2. Bebida");
                                                         sc.nextLine();
                                                         String tipo = sc.nextLine();
-                                                        System.out.println("Fecha de caducidad");
+                                                        System.out.println(ANSI_GREEN+"Fecha de caducidad");
                                                         String fecha_venci = sc.nextLine();
 
                                                         comida.add(new Comida(tipo, fecha_venci, descrip3, nom3, precio3));
@@ -332,14 +332,14 @@ public class Lab3_FelipeLinJarodZuniga {
                                                         break;
                                                     }
                                                     default:
-                                                        System.out.println("No existe esa opcion!");
+                                                        System.out.println(ANSI_GREEN+"No existe esa opcion!");
                                                         break;
                                                 }
 
                                                 break;
                                             }
                                             default:
-                                                System.out.println("No existe esa opcion!");
+                                                System.out.println(ANSI_GREEN+"No existe esa opcion!");
                                         }
                                         break;
                                     }
@@ -348,7 +348,7 @@ public class Lab3_FelipeLinJarodZuniga {
                                         break;
                                     }
                                     default:
-                                        System.out.println("No existe esa opcion");
+                                        System.out.println(ANSI_GREEN+"No existe esa opcion");
                                 }
                                 System.out.println(ANSI_GREEN + "Bienvenido Administrador" + master);
                                 System.out.println(ANSI_GREEN + "1. Crear " + ANSI_GREEN + "\n2. Modificar " + ANSI_GREEN + "\n3. Eliminar: " + ANSI_GREEN + "\n4. Exit" + ANSI_GREEN);
@@ -376,44 +376,44 @@ public class Lab3_FelipeLinJarodZuniga {
                             }
                             if (v == 1) {
                                 int o=0;
-                                System.out.println("1.Tienda \n" + "2. Bar \n" + "3.Quiosco");
+                                System.out.println(ANSI_GREEN+"1.Tienda \n" + ANSI_GREEN+"2. Bar \n" +ANSI_GREEN+ "3.Quiosco");
                                 System.out.println("");
-                                System.out.println("Ingrese el tipo de tienda a la que desea ingresar");
+                                System.out.println(ANSI_GREEN+"Ingrese el tipo de tienda a la que desea ingresar");
                                 int t = sc.nextInt();
                                 switch (t) {
                                     case 1:
                                         
                                         for (int i = 0; i < tienda.size(); i++) {
-                                            System.out.println(i + "" + tienda.get(i));
+                                            System.out.println(ANSI_GREEN+i + "" + tienda.get(i));
                                         }
-                                        System.out.println("A cual tienda desea entrar?");
+                                        System.out.println(ANSI_GREEN+"A cual tienda desea entrar?");
                                         o=sc.nextInt();
                                         for (int i = 0; i < tienda.get(o).getListaP().size(); i++) {
-                                            System.out.println( tienda.get(o).getListaP().get(i)+"---------"+tienda.get(o).getListaP().get(i).getPrecio());
+                                            System.out.println( ANSI_GREEN+tienda.get(o).getListaP().get(i)+"---------"+tienda.get(o).getListaP().get(i).getPrecio());
                                         }
                                         break;
                                     case 2:
                                         for (int i = 0; i < bar.size(); i++) {
-                                            System.out.println(i + "" + bar.get(i));
+                                            System.out.println(ANSI_GREEN+i + "" + bar.get(i));
                                         }
-                                        System.out.println("A cual Bar desea entrar?");
+                                        System.out.println(ANSI_GREEN+"A cual Bar desea entrar?");
                                         o=sc.nextInt();
                                         for (int i = 0; i < bar.get(o).getListaP().size(); i++) {
-                                            System.out.println( bar.get(o).getListaP().get(i)+"--------"+bar.get(o).getListaP().get(i).getPrecio());
+                                            System.out.println(ANSI_GREEN+ bar.get(o).getListaP().get(i)+"--------"+bar.get(o).getListaP().get(i).getPrecio());
                                         }
                                         break;
                                     case 3:
                                         for (int i = 0; i < quiosco.size(); i++) {
                                             System.out.println(i + "" + quiosco.get(i));
                                         }
-                                        System.out.println("A cual quiosco desea entrar?");
+                                        System.out.println(ANSI_GREEN+"A cual quiosco desea entrar?");
                                         o=sc.nextInt();
                                         for (int i = 0; i < quiosco.get(o).getListaP().size(); i++) {
-                                            System.out.println( quiosco.get(o).getListaP().get(i)+"--------"+quiosco.get(o).getListaP().get(i).getPrecio());
+                                            System.out.println(ANSI_GREEN+ quiosco.get(o).getListaP().get(i)+"--------"+quiosco.get(o).getListaP().get(i).getPrecio());
                                         }
                                         break;
                                     default:
-                                        System.out.println("Esa opcion no existe");
+                                        System.out.println(ANSI_GREEN+"Esa opcion no existe");
                                         break;
                                 }
 
@@ -426,26 +426,26 @@ public class Lab3_FelipeLinJarodZuniga {
                     }
                     break;
                 case 2:
-                    System.out.println("Ingrese su ID");
+                    System.out.println(ANSI_GREEN+"Ingrese su ID");
                     String id = sc.next();
-                    System.out.println("Ingrese su nombre de usuario");
+                    System.out.println(ANSI_GREEN+"Ingrese su nombre de usuario");
                     String nuvusu = sc.next();
-                    System.out.println("Ingrese su contraseña");
+                    System.out.println(ANSI_GREEN+"Ingrese su contraseña");
                     String nupas = sc.next();
 
-                    System.out.println("Ingrese su correo");
+                    System.out.println(ANSI_GREEN+"Ingrese su correo");
                     String corr = sc.next();
 
-                    System.out.println("Ingrese su nombre");
+                    System.out.println(ANSI_GREEN+"Ingrese su nombre");
                     String nom = sc.next();
-                    System.out.println("Ingrese su fecha de nacimento");
+                    System.out.println(ANSI_GREEN+"Ingrese su fecha de nacimento");
                     String nac = sc.next();
-                    System.out.println("Ingrese su efectivo");
+                    System.out.println(ANSI_GREEN+"Ingrese su efectivo");
                     int cash = sc.nextInt();
-                    System.out.print("Procesando../");
-                    System.out.print("../");
-                    System.out.print("../");
-                    System.out.print("../");
+                    System.out.print(ANSI_GREEN+"Procesando../");
+                    System.out.print(ANSI_GREEN+"../");
+                    System.out.print(ANSI_GREEN+"../");
+                    System.out.print(ANSI_GREEN+"../");
                     System.out.println("");
 
                     Clientes.add(new Clientes(cash, co, id, nuvusu, nupas, corr, nom, nac));
